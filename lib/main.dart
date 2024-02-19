@@ -1,5 +1,6 @@
 import 'package:donextui1/auto_image_slider.dart';
 import 'package:donextui1/container_slider.dart';
+import 'package:donextui1/myPageView.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -44,8 +45,8 @@ class MyApp extends StatelessWidget {
                               // Add some vertical space
                               Row(
                                 children: [ Icon(
-                                          Icons.location_city
-                                      ),
+                                    Icons.location_city
+                                ),
                                   SizedBox(width: 8),
 
                                   Text(
@@ -59,8 +60,8 @@ class MyApp extends StatelessWidget {
                                   Spacer(),
                                   //notification button
                                   Icon(
-                                        Icons.notifications,
-                                      size: 40,
+                                    Icons.notifications,
+                                    size: 40,
                                   ),
                                 ],
                               ),
@@ -98,7 +99,7 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
 
-                      SizedBox(height: 15),
+                  SizedBox(height: 15),
                   //second row
 
                   Row(
@@ -118,14 +119,15 @@ class MyApp extends StatelessWidget {
                                   Text(
                                     "#SpecialForYou",
                                     style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16 // Adjust the font size as desired
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16 // Adjust the font size as desired
                                     ),
                                   ),
 
                                   Spacer(),
 
-                                  Text("see more"),
+                                  Text("see more",
+                                      style: TextStyle(color: Colors.lightGreen)),
                                 ],
                               ),
                             ],
@@ -134,6 +136,48 @@ class MyApp extends StatelessWidget {
                       ),
                     ],
                   ),
+
+//import container
+
+
+
+                  //categories
+
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                          ),
+                          height: 55,
+                          padding: EdgeInsets.all(16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    "Categories",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16 // Adjust the font size as desired
+                                    ),
+                                  ),
+
+                                  Spacer(),
+
+                                  Text("see all",
+                                      style: TextStyle(color: Colors.green)),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+
 
 
                   SizedBox(height: 15),
@@ -160,35 +204,19 @@ class MyApp extends StatelessWidget {
                         ),
                       ),
 
-                                       SizedBox(width: 10),
+                      SizedBox(width: 10),
 
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.grey.shade300,
+                              color: Colors.grey.shade300,
                               borderRadius: BorderRadius.circular(100)
                           ),
                           height: 100,
                           padding: EdgeInsets.all(16),
 
                           child: Icon(Icons.build,
-                          size: 50),
-                        ),
-                      ),
-
-                                      SizedBox(width: 10),
-
-                      Expanded(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade300,
-                              borderRadius: BorderRadius.circular(100)
-                          ),
-                          height: 100,
-                          padding: EdgeInsets.all(16),
-
-                          child: Icon(Icons.plumbing,
-                                  size: 50),
+                              size: 50),
                         ),
                       ),
 
@@ -197,8 +225,24 @@ class MyApp extends StatelessWidget {
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.grey.shade300,
-                            borderRadius: BorderRadius.circular(100)
+                              color: Colors.grey.shade300,
+                              borderRadius: BorderRadius.circular(100)
+                          ),
+                          height: 100,
+                          padding: EdgeInsets.all(16),
+
+                          child: Icon(Icons.plumbing,
+                              size: 50),
+                        ),
+                      ),
+
+                      SizedBox(width: 10),
+
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Colors.grey.shade300,
+                              borderRadius: BorderRadius.circular(100)
                           ),
                           height: 100,
                           padding: EdgeInsets.all(16),
@@ -262,7 +306,7 @@ class MyApp extends StatelessWidget {
                       Expanded(
                         child: Container(
                           decoration: BoxDecoration(
-                           // color: Colors.yellow,
+                            // color: Colors.yellow,
                           ),
                           height: 50,
                           width: 400,
@@ -273,8 +317,6 @@ class MyApp extends StatelessWidget {
                       ),
                     ],
                   ),
-
-
                 ],
               ),
             ),
